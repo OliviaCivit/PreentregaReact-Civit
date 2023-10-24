@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from '../ItemList/itemlist';
-import {getProducts} from '../components/asyncMock'
+import {getProductsById, getProductsById} from '../components/asyncMock'
 
 
 
@@ -8,7 +8,7 @@ const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState ([])
 
     useEffect (() => {
-        getProducts ()
+        getProductsById ()
         .then (Response => {
             setProducts (Response)
         })
